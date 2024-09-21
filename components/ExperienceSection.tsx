@@ -1,4 +1,7 @@
 import React from 'react'
+import Badge from './ui/Badge'
+import LinkWithIcon from './ui/LinkWithIcon'
+import ExternalLinkIcon from './icons/ExternalLinkIcon'
 
 const experiences = [
     {
@@ -97,11 +100,11 @@ const experiences = [
     }
 ]
 
-interface Prop {
+interface Props {
     className: string
 }
 
-const ExperienceSection = ({ className = '' }: Prop) => {
+const ExperienceSection = ({ className = '' }: Props) => {
     return <div id="experience" className={className} >
         <ol className="group/list">
             {
@@ -124,7 +127,7 @@ const ExperienceSection = ({ className = '' }: Prop) => {
                                                     {designation} ·{" "}
                                                     <span className="inline-block">
                                                         {experience.company.name}
-                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="inline-block h-4 w-4 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none ml-1 translate-y-px" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd"></path></svg>
+                                                        <ExternalLinkIcon />
                                                     </span>
                                                 </span>
                                             </a>
@@ -142,21 +145,14 @@ const ExperienceSection = ({ className = '' }: Prop) => {
                             {
                                 experience.projects.length > 0 && <ul className="flex flex-wrap mt-2 text-xs text-slate-200 font-medium" aria-label="Related links">
                                     {experience.projects.map((project, projectIdx) => <li key={projectIdx} className="mr-4 mt-2">
-                                        <a href={project.url} className="relative inline-flex items-center text-sm font-medium hover:text-teal-300 focus-visible:text-teal-300" target="_blank" rel="noreferrer noopener" aria-label={`${project.label} (opens in a new tab)`}>
-                                            <span className="mr-0.5">
-                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="mr-1 h-3 w-3" aria-hidden="true"><path d="M12.232 4.232a2.5 2.5 0 013.536 3.536l-1.225 1.224a.75.75 0 001.061 1.06l1.224-1.224a4 4 0 00-5.656-5.656l-3 3a4 4 0 00.225 5.865.75.75 0 00.977-1.138 2.5 2.5 0 01-.142-3.667l3-3z"></path><path d="M11.603 7.963a.75.75 0 00-.977 1.138 2.5 2.5 0 01.142 3.667l-3 3a2.5 2.5 0 01-3.536-3.536l1.225-1.224a.75.75 0 00-1.061-1.06l-1.224 1.224a4 4 0 105.656 5.656l3-3a4 4 0 00-.225-5.865z"></path></svg>
-                                            </span>
-                                            {project.label}
-                                        </a>
+                                        <LinkWithIcon href={project.url} label={project.label} icon='url' />
                                     </li>)}
                                 </ul>
                             }
 
                             <ul className="flex flex-wrap mt-2 text-xs font-medium" aria-label="Technologies used">
                                 {experience.skills.map((skill, skillIdx) => <li key={skillIdx} className="mr-1.5 mt-2">
-                                    <div className="bg-teal-400/10 text-teal-300 leading-5 rounded-full px-3 py-1">
-                                        {skill}
-                                    </div>
+                                    <Badge label={skill} />
                                 </li>)}
                             </ul>
                         </div>
