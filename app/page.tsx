@@ -1,3 +1,4 @@
+import BlogsSections from "@/components/BlogsSections";
 import ExperienceSection from "@/components/ExperienceSection";
 import ProjectsSection from "@/components/ProjectsSection";
 
@@ -89,6 +90,7 @@ export default function Home() {
           </div>
           <ExperienceSection className='mt-10' />
           <ProjectsSection className="mt-10" />
+          <BlogsSections className="mt-10" />
         </div>
         <div></div>
       </div>

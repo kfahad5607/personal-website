@@ -83,7 +83,7 @@ const ProjectsSection = ({ className }: Prop) => {
                             />
                         </div>
                         <div className="z-10 sm:col-span-6">
-                            <h3 className="z-10 font-medium leading-snug text-slate-200">
+                            <h3 className="font-medium leading-snug text-slate-200">
                                 <a href={project.url} className="group/link hover:text-teal-300 focus-visible:text-teal-300" target="_blank" rel="noreferrer noopener" aria-label={`${project.title} (opens in a new tab)`}>
                                     <span className="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"></span>
                                     <span>

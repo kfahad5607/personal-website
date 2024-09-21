@@ -114,7 +114,7 @@ const ExperienceSection = ({ className = '' }: Prop) => {
                             <span>{experience.endDate}</span>
                         </header>
                         <div className="z-10 sm:col-span-6">
-                            <h3 className="z-10 font-medium leading-snug text-slate-200">
+                            <h3 className="font-medium leading-snug text-slate-200">
                                 {
                                     experience.designations.map((designation, designationIdx) => {
                                         if (designationIdx === 0) return <div>
