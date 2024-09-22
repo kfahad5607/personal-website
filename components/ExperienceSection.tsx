@@ -153,7 +153,7 @@ const ExperienceSection = ({ className = '' }: Props) => {
             }
         </ol>
         <div className='mt-10'>
-            <TitleWithLink className='font-semibold text-slate-200' href='/docs/resume.pdf' title='View Full Résumé' ariaLabel='View Full Résumé (opens in a new tab)' />
+            <TitleWithLink className='relative font-semibold text-slate-200' href='/docs/resume.pdf' title='View Full Résumé' ariaLabel='View Full Résumé (opens in a new tab)' />
         </div>
     </div>)
 }
