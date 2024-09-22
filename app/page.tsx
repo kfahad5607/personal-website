@@ -21,7 +21,7 @@ const socialLinks = [
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-slate-900">
+    <div className="min-h-screen">
       <div className="flex justify-center gap-4 text-slate-400 px-24">
         <div className="w-full py-24">
           <div className="mb-16">
