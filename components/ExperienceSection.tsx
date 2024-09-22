@@ -126,7 +126,7 @@ const ExperienceSection = ({ className = '' }: Props) => {
                                     {
                                         experience.designations.map((designation, designationIdx) => {
                                             if (designationIdx === 0) return <div key={designationIdx}>
-                                                <TitleWithLink href={experience.company.url} title={`${designation} ·`} subTitle={experience.company.name} ariaLabel={`${designation} at ${experience.company.name} (opens in a new tab)`} />
+                                                <TitleWithLink href={experience.company.url} title={`${designation} · `} subTitle={experience.company.name} ariaLabel={`${designation} at ${experience.company.name} (opens in a new tab)`} />
                                             </div>
 
                                             return <div key={designationIdx}>
