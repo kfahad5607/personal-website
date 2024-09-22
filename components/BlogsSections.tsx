@@ -2,13 +2,13 @@ import React from 'react'
 import Image from 'next/image'
 import algoliaSearch from '@/public/images/algolia-search.webp'
 import headless from '@/public/images/headless.webp'
-import ExternalLinkIcon from './icons/ExternalLinkIcon'
+import TitleWithLink from './ui/TitleWithLink'
 
 const blogs = [
     {
         title: 'Integrating Algolia Search with WordPress',
         date: '2020',
-        url: 'https://www.newline.co/courses/build-a-spotify-connected-app',
+        url: 'https://upstatement.com/blog/integrating-algolia-search-with-wordpress-multisite/',
         thumbnail: {
             url: algoliaSearch,
             altText: 'Telescope'
@@ -16,7 +16,7 @@ const blogs = [
     }, {
         title: 'Building a Headless Mobile App CMS From Scratch',
         date: '2020',
-        url: 'https://www.newline.co/courses/build-a-spotify-connected-app',
+        url: 'https://upstatement.com/blog/building-a-headless-mobile-app-cms-from-scratch/',
         thumbnail: {
             url: headless,
             altText: 'Headless horseman'
@@ -45,15 +45,7 @@ const BlogsSections = ({ className = '' }: Props) => {
                         <div className="z-10 flex flex-col justify-center sm:col-span-6">
                             <div className='text-sm font-semibold leading-6'>{blog.date}</div>
                             <h3 className="-mt-1 font-medium leading-snug text-slate-200">
-                                <a href={blog.url} className="group/link hover:text-teal-300 focus-visible:text-teal-300" target="_blank" rel="noreferrer noopener" aria-label={`${blog.title} (opens in a new tab)`}>
-                                    <span className="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"></span>
-                                    <span>
-                                        {blog.title}
-                                        <span className="inline-block">
-                                            <ExternalLinkIcon />
-                                        </span>
-                                    </span>
-                                </a>
+                                <TitleWithLink href={blog.url} title={blog.title} ariaLabel={`${blog.title} (opens in a new tab)`} />
                             </h3>
                         </div>
                     </div>

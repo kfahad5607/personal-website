@@ -1,7 +1,8 @@
 import React from 'react'
 import Badge from './ui/Badge'
 import LinkWithIcon from './ui/LinkWithIcon'
-import ExternalLinkIcon from './icons/ExternalLinkIcon'
+import Description from './ui/Description'
+import TitleWithLink from './ui/TitleWithLink'
 
 const experiences = [
     {
@@ -105,7 +106,7 @@ interface Props {
 }
 
 const ExperienceSection = ({ className = '' }: Props) => {
-    return <div id="experience" className={className} >
+    return (<div id="experience" className={className} >
         <ol className="group/list">
             {
                 experiences.map((experience, experienceIdx) => <li key={experienceIdx} className="mt-12">
@@ -120,28 +121,19 @@ const ExperienceSection = ({ className = '' }: Props) => {
                             <h3 className="font-medium leading-snug text-slate-200">
                                 {
                                     experience.designations.map((designation, designationIdx) => {
-                                        if (designationIdx === 0) return <div>
-                                            <a href={experience.company.url} className="group/link hover:text-teal-300 focus-visible:text-teal-300" target="_blank" rel="noreferrer noopener" aria-label={`${experience.designations[0]} at ${experience.company.name} (opens in a new tab)`}>
-                                                <span className="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"></span>
-                                                <span>
-                                                    {designation} ·{" "}
-                                                    <span className="inline-block">
-                                                        {experience.company.name}
-                                                        <ExternalLinkIcon />
-                                                    </span>
-                                                </span>
-                                            </a>
+                                        if (designationIdx === 0) return <div key={designationIdx}>
+                                            <TitleWithLink href={experience.company.url} title={`${designation} · ${experience.company.name}`} ariaLabel={`${designation} at ${experience.company.name} (opens in a new tab)`} />
                                         </div>
 
-                                        return <div>
+                                        return <div key={designationIdx}>
                                             <div className="text-slate-500 mt-0.5" >{designation}</div>
                                         </div>
                                     })
                                 }
                             </h3>
-                            <div className="text-sm leading-normal mt-2">
+                            <Description className='mt-2'>
                                 {experience.description}
-                            </div>
+                            </Description>
                             {
                                 experience.projects.length > 0 && <ul className="flex flex-wrap mt-2 text-xs text-slate-200 font-medium" aria-label="Related links">
                                     {experience.projects.map((project, projectIdx) => <li key={projectIdx} className="mr-4 mt-2">
@@ -160,7 +152,10 @@ const ExperienceSection = ({ className = '' }: Props) => {
                 </li>)
             }
         </ol>
-    </div>
+        <div className='mt-10'>
+            <TitleWithLink className='font-semibold text-slate-200' href='/docs/resume.pdf' title='View Full Résumé' ariaLabel='View Full Résumé (opens in a new tab)' />
+        </div>
+    </div>)
 }
 
 export default ExperienceSection

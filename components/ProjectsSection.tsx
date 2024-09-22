@@ -6,7 +6,9 @@ import halcyon from '@/public/images/halcyon.webp'
 import v4 from '@/public/images/v4.webp'
 import Badge from './ui/Badge'
 import LinkWithIcon from './ui/LinkWithIcon'
-import ExternalLinkIcon from './icons/ExternalLinkIcon'
+import Description from './ui/Description'
+import TitleWithLink from './ui/TitleWithLink'
+import RightArrowIcon from './icons/RightArrowIcon'
 
 const projects = [
     {
@@ -87,19 +89,11 @@ const ProjectsSection = ({ className }: Props) => {
                         </div>
                         <div className="z-10 sm:col-span-6">
                             <h3 className="font-medium leading-snug text-slate-200">
-                                <a href={project.url} className="group/link hover:text-teal-300 focus-visible:text-teal-300" target="_blank" rel="noreferrer noopener" aria-label={`${project.title} (opens in a new tab)`}>
-                                    <span className="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"></span>
-                                    <span>
-                                        {project.title}
-                                        <span className="inline-block">
-                                            <ExternalLinkIcon />
-                                        </span>
-                                    </span>
-                                </a>
+                                <TitleWithLink href={project.url} title={project.title} ariaLabel={`${project.title} (opens in a new tab)`} />
                             </h3>
-                            <div className="text-sm leading-normal mt-2">
+                            <Description className='mt-2'>
                                 {project.description}
-                            </div>
+                            </Description>
                             {
                                 project.stats && <div className='mt-2'>
                                     <LinkWithIcon href={project.stats.url} label={project.stats.text} icon={project.stats.icon} />
@@ -115,6 +109,19 @@ const ProjectsSection = ({ className }: Props) => {
                 </li>)
             }
         </ol>
+        <div className="mt-10">
+            <a href='#' className={`group font-semibold text-slate-200`} target="_blank" rel="noreferrer noopener" aria-label={'ariaLabel'}>
+                <span className="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"></span>
+                <span>
+                    <span className='border-b border-solid border-transparent pb-px group-hover:border-teal-300 group-focus-visible:border-teal-300 transition motion-reduce:transition-none'>
+                        View Full Project Archive
+                    </span>
+                    <span className="inline-block ml-1 transition-transform group-hover:translate-x-2 group-focus-visible:translate-x-2 motion-reduce:transition-none">
+                        <RightArrowIcon />
+                    </span>
+                </span>
+            </a>
+        </div>
     </div>
 }
 
