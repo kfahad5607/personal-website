@@ -12,7 +12,7 @@ import ArrowIcon from './icons/ArrowIcon'
 
 const projects = [
     {
-        title: 'Build a Spotify Connected',
+        title: 'Build a Spotify Connected App',
         url: 'https://www.newline.co/courses/build-a-spotify-connected-app',
         thumbnail: {
             url: courseCard,
@@ -74,52 +74,57 @@ interface Props {
 }
 
 const ProjectsSection = ({ className }: Props) => {
-    return <div id="projects" className={className}>
-        <ol className="group/list">
-            {
-                projects.map((project, projectIdx) => <li key={projectIdx} className="mt-12">
-                    <div className="group relative transition-all grid sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
-                        <div className="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg"></div>
-                        <div className='sm:col-span-2'>
+    return <section id="projects" className={className}>
+        <div className='bg-slate-900/75 backdrop-blur px-6 py-5 -mx-6 mb-4 sticky top-0 md:-mx-12 md:px-12 lg:sr-only lg:relative lg:px-0 lg:py-0 lg:opacity-0'>
+            <h2 className="text-sm font-bold uppercase tracking-widest text-slate-200 lg:sr-only">Projects</h2>
+        </div>
+        <div>
+            <ul className="group/list">
+                {
+                    projects.map((project, projectIdx) => <li key={projectIdx} className="mb-12">
+                        <div className="group relative transition-all grid gap-4 pb-1 sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
+                            <div className="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg"></div>
+                            <div className="z-10 sm:col-span-6 sm:order-2">
+                                <h3 className="font-medium leading-snug text-slate-200">
+                                    <TitleWithLink href={project.url} title={project.title} ariaLabel={`${project.title} (opens in a new tab)`} />
+                                </h3>
+                                <Description className='mt-2'>
+                                    {project.description}
+                                </Description>
+                                {
+                                    project.stats && <div className='mt-2'>
+                                        <LinkWithIcon href={project.stats.url} label={project.stats.text} icon={project.stats.icon} />
+                                    </div>
+                                }
+                                <ul className="flex flex-wrap mt-2 text-xs font-medium" aria-label="Technologies used">
+                                    {project.skills.map((skill, skillIdx) => <li key={skillIdx} className="mr-1.5 mt-2">
+                                        <Badge label={skill} />
+                                    </li>)}
+                                </ul>
+                            </div>
                             <Image
-                                className='rounded border-2 border-slate-200/10 transition group-hover:border-slate-200/30 sm:order-1 sm:col-span-2 sm:translate-y-1'
+                                className='rounded border-2 border-slate-200/10 transition group-hover:border-slate-200/30 sm:col-span-2 sm:translate-y-1 sm:order-1 '
                                 src={project.thumbnail.url}
                                 alt={project.thumbnail.altText}
+                                width={200}
+                                height={48}
                             />
                         </div>
-                        <div className="z-10 sm:col-span-6">
-                            <h3 className="font-medium leading-snug text-slate-200">
-                                <TitleWithLink href={project.url} title={project.title} ariaLabel={`${project.title} (opens in a new tab)`} />
-                            </h3>
-                            <Description className='mt-2'>
-                                {project.description}
-                            </Description>
-                            {
-                                project.stats && <div className='mt-2'>
-                                    <LinkWithIcon href={project.stats.url} label={project.stats.text} icon={project.stats.icon} />
-                                </div>
-                            }
-                            <ul className="flex flex-wrap mt-2 text-xs font-medium" aria-label="Technologies used">
-                                {project.skills.map((skill, skillIdx) => <li key={skillIdx} className="mr-1.5 mt-2">
-                                    <Badge label={skill} />
-                                </li>)}
-                            </ul>
-                        </div>
-                    </div>
-                </li>)
-            }
-        </ol>
-        <div className="mt-10">
-            <a href='/archive' className={`group font-semibold text-slate-200`} rel="noreferrer noopener" aria-label='View Full Project Archive'>
+                    </li>)
+                }
+            </ul>
+            <div className="mt-12">
+                <a href='/archive' className={`group font-semibold text-slate-200`} rel="noreferrer noopener" aria-label='View Full Project Archive'>
                     <span className='border-b border-solid border-transparent pb-px group-hover:border-teal-300 group-focus-visible:border-teal-300 transition motion-reduce:transition-none'>
                         View Full Project Archive
                     </span>
                     <span className="inline-block ml-1 transition-transform group-hover:translate-x-2 group-focus-visible:translate-x-2 motion-reduce:transition-none">
-                    <ArrowIcon />
-                </span>
-            </a>
+                        <ArrowIcon />
+                    </span>
+                </a>
+            </div>
         </div>
-    </div>
+    </section>
 }
 
 export default ProjectsSection
