@@ -9,7 +9,12 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['var(--font-inter)']
+        sans: [
+          "var(--font-inter)",
+          {
+            fontFeatureSettings: '"ss03","cv02","cv11"',
+          },
+        ],
       },
       colors: {
         background: "var(--background)",
