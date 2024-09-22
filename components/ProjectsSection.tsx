@@ -8,7 +8,7 @@ import Badge from './ui/Badge'
 import LinkWithIcon from './ui/LinkWithIcon'
 import Description from './ui/Description'
 import TitleWithLink from './ui/TitleWithLink'
-import RightArrowIcon from './icons/RightArrowIcon'
+import ArrowIcon from './icons/ArrowIcon'
 
 const projects = [
     {
@@ -110,12 +110,12 @@ const ProjectsSection = ({ className }: Props) => {
             }
         </ol>
         <div className="mt-10">
-            <a href='#' className={`group font-semibold text-slate-200`} target="_blank" rel="noreferrer noopener" aria-label={'ariaLabel'}>
+            <a href='/archive' className={`group font-semibold text-slate-200`} rel="noreferrer noopener" aria-label='View Full Project Archive'>
                     <span className='border-b border-solid border-transparent pb-px group-hover:border-teal-300 group-focus-visible:border-teal-300 transition motion-reduce:transition-none'>
                         View Full Project Archive
                     </span>
                     <span className="inline-block ml-1 transition-transform group-hover:translate-x-2 group-focus-visible:translate-x-2 motion-reduce:transition-none">
-                    <RightArrowIcon />
+                    <ArrowIcon />
                 </span>
             </a>
         </div>
