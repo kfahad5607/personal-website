@@ -21,8 +21,7 @@ const sections = [
 
 export default function Home() {
   return (
-    <div className="min-h-screen max-w-screen-xl mx-auto px-6 py-12 font-sans md:px-12 md:py-20 lg:px-24 lg:py-0">
-      <div className="lg:flex lg:justify-between lg:gap-4 text-slate-400">
+    <div className="lg:flex lg:justify-between lg:gap-4">
         <header className="lg:flex lg:flex-col lg:justify-between lg:w-1/2 lg:max-h-screen lg:py-24 lg:sticky lg:top-0">
           <div>
             <div>
@@ -83,8 +82,7 @@ export default function Home() {
           <BlogsSections className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24" />
           <AttributionSection />
         </main>
-        <div></div>
-      </div>
+      <div></div>
     </div>
   );
 }

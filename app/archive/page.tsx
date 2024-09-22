@@ -43,10 +43,7 @@ const projects = [
             "React",
             "TypeScript"
         ],
-        "link": {
-            "url": null,
-            "label": null
-        }
+        "link": null
     },
     {
         "year": 2022,
@@ -182,10 +179,7 @@ const projects = [
             "PHP",
             "JavaScript"
         ],
-        "link": {
-            "url": null,
-            "label": null
-        }
+        "link": null
     },
     {
         "year": 2020,
@@ -376,10 +370,7 @@ const projects = [
             "Timber",
             "WooCommerce"
         ],
-        "link": {
-            "url": null,
-            "label": null
-        }
+        "link": null
     },
     {
         "year": 2018,
@@ -642,10 +633,7 @@ const projects = [
             "JavaScript",
             "jQuery"
         ],
-        "link": {
-            "url": null,
-            "label": null
-        }
+        "link": null
     },
     {
         "year": 2015,
@@ -657,72 +645,78 @@ const projects = [
             "CSS",
             "JavaScript"
         ],
-        "link": {
-            "url": null,
-            "label": null
-        }
+        "link": null
     }
 ]
 
 const Archive = () => {
     return (
-        <div className="min-h-screen">
-            <div className="flex gap-4 text-slate-400 px-24">
-                <div className="py-24">
-                    <header>
-                        <a href="/" className='group inline-block leading-tight font-semibold text-teal-300 mb-2' rel="noreferrer noopener" aria-label=''>
-                            <span className='inline-block mr-1 transition-transform group-hover:-translate-x-2 motion-reduce:transition-none'>
-                                <ArrowIcon direction='left' />
-                            </span>
-                            <span>
-                                Brittany Chiang
-                            </span>
-                        </a>
-                        <h1 className='text-slate-200 text-4xl tracking-tight font-bold sm:text-5xl'>All Projects</h1>
-                    </header>
-                    <div className="mt-12">
-                        <table className='w-full border-collapse text-left'>
-                            <thead>
-                                <tr className='text-slate-200 text-sm'>
-                                    <th className='font-semibold py-4 pr-8'>Year</th>
-                                    <th className='font-semibold py-4 pr-8'>Project</th>
-                                    <th className='font-semibold py-4 pr-8'>Made at</th>
-                                    <th className='font-semibold py-4 pr-8'>Built with</th>
-                                    <th className='font-semibold py-4 pr-8'>Link</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {
-                                    projects.map((project, projectIdx) =>
-                                        <tr key={projectIdx} className='border-t border-slate-300/10'>
-                                            <td className='align-top py-4 pr-4 text-sm'>{project.year}</td>
-                                            <td className='align-top py-4 pr-4'>
-                                                <span className='font-semibold leading-snug text-slate-200'>{project.title}</span>
-                                            </td>
-                                            <td className='align-top py-4 pr-4'>
-                                                <span className='text-sm'>
-                                                    {project.madeAt}
-                                                </span>
-                                            </td>
-                                            <td className='align-top py-4 pr-4'>
-                                                <ul className='inline-flex flex-wrap text-xs -translate-y-1.5'>
+        <div className="lg:py-24">
+            <header>
+                <a href="/" className='group inline-flex items-center leading-tight font-semibold text-teal-300 mb-2' rel="noreferrer noopener" aria-label=''>
+                    <span className='inline-block mr-1 transition-transform group-hover:-translate-x-2 motion-reduce:transition-none'>
+                        <ArrowIcon direction='left' />
+                    </span>
+                    <span>
+                        Brittany Chiang
+                    </span>
+                </a>
+                <h1 className='text-slate-200 text-4xl tracking-tight font-bold sm:text-5xl'>All Projects</h1>
+            </header>
+            <div className="mt-12">
+                <table id='content' className='w-full border-collapse text-left'>
+                    <thead className='sticky top-0 z-10 border-b border-slate-300/10 bg-slate-900/75 px-6 py-5 backdrop-blur'>
+                        <tr className='text-slate-200 text-sm'>
+                            <th className='font-semibold py-4 pr-8'>Year</th>
+                            <th className='font-semibold py-4 pr-8'>Project</th>
+                            <th className='hidden py-4 pr-8 text-sm font-semibold lg:table-cell'>Made at</th>
+                            <th className='hidden py-4 pr-8 text-sm font-semibold lg:table-cell'>Built with</th>
+                            <th className='hidden py-4 pr-8 text-sm font-semibold sm:table-cell'>Link</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {
+                            projects.map((project, projectIdx) =>
+                                <tr key={projectIdx} className='border-b border-slate-300/10 last:border-none'>
+                                    <td className='align-top py-4 pr-4 text-sm'>{project.year}</td>
+                                    <td className='align-top py-4 pr-4'>
+                                        <span className='font-semibold leading-snug text-slate-200'>
+                                            <div>
+                                                <div className="block sm:hidden">
                                                     {
-                                                        project.skills.map((skill, skillIdx) => <li key={skillIdx} className='mr-1.5 mt-2'  >
-                                                            <Badge label={skill} />
-                                                        </li>)
+                                                        project.link ? <TitleWithLink href={project.link.url} title={project.title} ariaLabel={`${project.title} (opens in a new tab)`} className='relative text-base sm:hidden' /> : <span>{project.title}</span>
                                                     }
-                                                </ul>
-                                            </td>
-                                            <td className='align-top py-4'>
-                                                <TitleWithLink href='#' title='emersoncollective.com' ariaLabel='emersoncollective.com' className='relative text-sm' />
-                                            </td>
-                                        </tr>
-                                    )
-                                }
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
+                                                </div>
+                                                <div className="hidden sm:block">{project.title}</div>
+                                            </div>
+                                        </span>
+                                    </td>
+                                    <td className='hidden py-4 pr-4 align-top text-sm lg:table-cell'>
+                                        <div className='translate-y-px whitespace-nowrap'>
+                                            {project.madeAt}
+                                        </div>
+                                    </td>
+                                    <td className='hidden py-4 pr-4 align-top lg:table-cell'>
+                                        <ul className='inline-flex flex-wrap text-xs -translate-y-1.5'>
+                                            {
+                                                project.skills.map((skill, skillIdx) => <li key={skillIdx} className='mr-1.5 my-1'  >
+                                                    <Badge label={skill} />
+                                                </li>)
+                                            }
+                                        </ul>
+                                    </td>
+                                    <td className='hidden py-4 align-top sm:table-cell'>
+                                        {
+                                            project.link && <div className='translate-y-1'>
+                                                <TitleWithLink href={project.link.url} title={project.link.label} ariaLabel={`${project.link.label} (opens in a new tab)`} className='relative text-sm' />
+                                            </div>
+                                        }
+                                    </td>
+                                </tr>
+                            )
+                        }
+                    </tbody>
+                </table>
             </div>
         </div>
     )
