@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { forwardRef } from 'react'
 import Badge from './ui/Badge'
 import LinkWithIcon from './ui/LinkWithIcon'
 import Description from './ui/Description'
@@ -102,11 +102,12 @@ const experiences = [
 ]
 
 interface Props {
+    id: string;
     className: string
 }
 
-const ExperienceSection = ({ className = '' }: Props) => {
-    return (<section id="experience" className={className} >
+const ExperienceSection = forwardRef(({ id, className = '' }: Props, ref: React.Ref<HTMLElement>) => {
+    return (<section ref={ref} id={id} className={className} >
         <div className='bg-slate-900/75 backdrop-blur px-6 py-5 -mx-6 mb-4 sticky top-0 md:-mx-12 md:px-12 lg:sr-only lg:relative lg:px-0 lg:py-0 lg:opacity-0'>
             <h2 className="text-sm font-bold uppercase tracking-widest text-slate-200 lg:sr-only">Experience</h2>
         </div>
@@ -161,6 +162,6 @@ const ExperienceSection = ({ className = '' }: Props) => {
             </div>
         </div>
     </section>)
-}
+})
 
 export default ExperienceSection

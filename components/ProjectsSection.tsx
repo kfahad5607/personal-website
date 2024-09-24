@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { forwardRef } from 'react'
 import Image from 'next/image'
 import courseCard from '@/public/images/course-card.webp'
 import spotifyProfile from '@/public/images/spotify-profile.webp'
@@ -70,11 +70,12 @@ const projects = [
 ]
 
 interface Props {
-    className: string
+    id: string;
+    className?: string
 }
 
-const ProjectsSection = ({ className }: Props) => {
-    return <section id="projects" className={className}>
+const ProjectsSection = forwardRef(({ id, className = '' }: Props, ref: React.Ref<HTMLElement>) => {
+    return <section ref={ref} id={id} className={className}>
         <div className='bg-slate-900/75 backdrop-blur px-6 py-5 -mx-6 mb-4 sticky top-0 md:-mx-12 md:px-12 lg:sr-only lg:relative lg:px-0 lg:py-0 lg:opacity-0'>
             <h2 className="text-sm font-bold uppercase tracking-widest text-slate-200 lg:sr-only">Projects</h2>
         </div>
@@ -125,6 +126,6 @@ const ProjectsSection = ({ className }: Props) => {
             </div>
         </div>
     </section>
-}
+})
 
 export default ProjectsSection
