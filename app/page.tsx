@@ -1,11 +1,12 @@
 "use client";
 
+import { useEffect, useRef, useState } from "react";
+import Link from 'next/link'
 import AboutSection from "@/components/AboutSection";
 import AttributionSection from "@/components/AttributionSection";
 import BlogsSections from "@/components/BlogsSections";
 import ExperienceSection from "@/components/ExperienceSection";
 import ProjectsSection from "@/components/ProjectsSection";
-import { useEffect, useRef, useState } from "react";
 
 const sections = [
   {
@@ -29,6 +30,8 @@ export default function Home() {
   const [currentSection, setCurrentSection] = useState<string>("about");
 
   useEffect(() => {
+    console.log("Mounted ", aboutRef.current, experienceRef.current, projectsRef.current);
+
     const observer = new IntersectionObserver(
       (entries) => {
         let _currentSection = '';
@@ -51,9 +54,17 @@ export default function Home() {
     observer.observe(projectsRef.current!);
 
     return () => {
-      observer.unobserve(aboutRef.current!);
-      observer.unobserve(experienceRef.current!);
-      observer.unobserve(projectsRef.current!);
+      console.log("unmounted ", aboutRef.current, experienceRef.current, projectsRef.current);
+
+      if (aboutRef.current)
+        observer.unobserve(aboutRef.current);
+
+      if (experienceRef.current)
+        observer.unobserve(experienceRef.current);
+
+      if (projectsRef.current)
+        observer.unobserve(projectsRef.current);
+
       observer.disconnect();
     };
   }, []);
@@ -64,7 +75,7 @@ export default function Home() {
         <div>
           <div>
             <h1 className="text-4xl font-bold text-slate-200 tracking-tight sm:text-5xl">
-              <a href="/">Brittany Chiang</a>
+              <Link href="/">Brittany Chiang</Link>
             </h1>
             <h2 className="text-lg font-medium text-slate-200 tracking-tight mt-3 sm:text-xl">
               Senior Frontend Engineer
@@ -81,7 +92,7 @@ export default function Home() {
             <ul className="w-max">
               {sections.map((section, sectionIdx) => (
                 <li key={section.href}>
-                  <a
+                  <Link
                     href={section.href}
                     className={`group flex items-center gap-x-4 py-3 outline-none ${currentSection === section.label ? "active" : ""
                       }`}
@@ -90,7 +101,7 @@ export default function Home() {
                     <span className="transition-colors uppercase text-xs text-slate-500 font-bold tracking-widest group-[.active]:text-slate-200 group-hover:text-slate-200 group-focus-visible:text-slate-200">
                       {section.label}
                     </span>
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -101,7 +112,7 @@ export default function Home() {
           aria-label="Social Media"
         >
           <li>
-            <a
+            <Link
               href="#"
               className="inline-block hover:text-slate-200 transition-colors"
               target="_blank"
@@ -119,10 +130,10 @@ export default function Home() {
               >
                 <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
               </svg>
-            </a>
+            </Link>
           </li>
           <li>
-            <a
+            <Link
               href="#"
               className="inline-block hover:text-slate-200 transition-colors"
               target="_blank"
@@ -140,10 +151,10 @@ export default function Home() {
               >
                 <path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"></path>
               </svg>
-            </a>
+            </Link>
           </li>
           <li>
-            <a
+            <Link
               href="#"
               className="inline-block hover:text-slate-200 transition-colors"
               target="_blank"
@@ -164,10 +175,10 @@ export default function Home() {
                   fill="currentColor"
                 ></path>
               </svg>
-            </a>
+            </Link>
           </li>
           <li>
-            <a
+            <Link
               href="#"
               className="inline-block hover:text-slate-200 transition-colors"
               target="_blank"
@@ -184,7 +195,7 @@ export default function Home() {
               >
                 <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z" />
               </svg>
-            </a>
+            </Link>
           </li>
         </ul>
       </header>

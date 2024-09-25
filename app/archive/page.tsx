@@ -1,7 +1,8 @@
+import React from 'react'
+import Link from 'next/link'
 import ArrowIcon from '@/components/icons/ArrowIcon'
 import Badge from '@/components/ui/Badge'
 import TitleWithLink from '@/components/ui/TitleWithLink'
-import React from 'react'
 
 const projects = [
     {
@@ -653,14 +654,14 @@ const Archive = () => {
     return (
         <div className="lg:py-24">
             <header>
-                <a href="/" className='group inline-flex items-center leading-tight font-semibold text-teal-300 mb-2' rel="noreferrer noopener" aria-label=''>
+                <Link href="/" className='group inline-flex items-center leading-tight font-semibold text-teal-300 mb-2' rel="noreferrer noopener" aria-label=''>
                     <span className='inline-block mr-1 transition-transform group-hover:-translate-x-2 motion-reduce:transition-none'>
                         <ArrowIcon direction='left' />
                     </span>
                     <span>
                         Brittany Chiang
                     </span>
-                </a>
+                </Link>
                 <h1 className='text-slate-200 text-4xl tracking-tight font-bold sm:text-5xl'>All Projects</h1>
             </header>
             <div className="mt-12">

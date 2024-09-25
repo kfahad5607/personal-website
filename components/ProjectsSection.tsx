@@ -1,4 +1,5 @@
 import React, { forwardRef } from 'react'
+import Link from 'next/link'
 import Image from 'next/image'
 import courseCard from '@/public/images/course-card.webp'
 import spotifyProfile from '@/public/images/spotify-profile.webp'
@@ -115,14 +116,14 @@ const ProjectsSection = forwardRef(({ id, className = '' }: Props, ref: React.Re
                 }
             </ul>
             <div className="mt-12">
-                <a href='/archive' className={`group font-semibold text-slate-200`} rel="noreferrer noopener" aria-label='View Full Project Archive'>
+                <Link href='/archive' className={`group font-semibold text-slate-200`} rel="noreferrer noopener" aria-label='View Full Project Archive'>
                     <span className='border-b border-solid border-transparent pb-px group-hover:border-teal-300 transition motion-reduce:transition-none'>
                         View Full Project Archive
                     </span>
                     <span className="inline-block ml-1 transition-transform group-hover:translate-x-2 group-focus-visible:translate-x-2 motion-reduce:transition-none">
                         <ArrowIcon />
                     </span>
-                </a>
+                </Link>
             </div>
         </div>
     </section>

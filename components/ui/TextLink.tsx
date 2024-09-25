@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 
 interface Props {
     href: string,
@@ -9,9 +10,9 @@ interface Props {
 
 const TextLink = ({ href, label, ariaLabel, className = '' }: Props) => {
     return (
-        <a href={href} className={`font-medium hover:text-teal-300 focus-visible:text-teal-300 ${className}`} target="_blank" rel="noreferrer noopener" aria-label={ariaLabel}>
+        <Link href={href} className={`font-medium hover:text-teal-300 focus-visible:text-teal-300 ${className}`} target="_blank" rel="noreferrer noopener" aria-label={ariaLabel}>
             {label}
-        </a>
+        </Link>
     )
 }
 
