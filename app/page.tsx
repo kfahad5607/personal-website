@@ -30,8 +30,6 @@ export default function Home() {
   const [currentSection, setCurrentSection] = useState<string>("about");
 
   useEffect(() => {
-    console.log("Mounted ", aboutRef.current, experienceRef.current, projectsRef.current);
-
     const observer = new IntersectionObserver(
       (entries) => {
         let _currentSection = '';
@@ -54,8 +52,6 @@ export default function Home() {
     observer.observe(projectsRef.current!);
 
     return () => {
-      console.log("unmounted ", aboutRef.current, experienceRef.current, projectsRef.current);
-
       if (aboutRef.current)
         observer.unobserve(aboutRef.current);
 
@@ -97,7 +93,7 @@ export default function Home() {
                     className={`group flex items-center gap-x-4 py-3 outline-none ${currentSection === section.label ? "active" : ""
                       }`}
                   >
-                    <span className="transition-all h-px w-8 bg-slate-500 group-[.active]:w-16 group-[.active]:bg-slate-200 group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:bg-slate-200 group-focus-visible:w-16"></span>
+                    <span className="transition-all h-px w-8 bg-slate-600 group-[.active]:w-16 group-[.active]:bg-slate-200 group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:bg-slate-200 group-focus-visible:w-16"></span>
                     <span className="transition-colors uppercase text-xs text-slate-500 font-bold tracking-widest group-[.active]:text-slate-200 group-hover:text-slate-200 group-focus-visible:text-slate-200">
                       {section.label}
                     </span>

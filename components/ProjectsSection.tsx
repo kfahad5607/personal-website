@@ -76,7 +76,7 @@ interface Props {
 }
 
 const ProjectsSection = forwardRef(({ id, className = '' }: Props, ref: React.Ref<HTMLElement>) => {
-    return <section ref={ref} id={id} className={className}>
+    return <section ref={ref} id={id} className={className} aria-label='Selected projects' >
         <div className='bg-slate-900/75 backdrop-blur px-6 py-5 -mx-6 mb-4 sticky top-0 md:-mx-12 md:px-12 lg:sr-only lg:relative lg:px-0 lg:py-0 lg:opacity-0'>
             <h2 className="text-sm font-bold uppercase tracking-widest text-slate-200 lg:sr-only">Projects</h2>
         </div>
@@ -116,7 +116,7 @@ const ProjectsSection = forwardRef(({ id, className = '' }: Props, ref: React.Re
                 }
             </ul>
             <div className="mt-12">
-                <Link href='/archive' className={`group font-semibold text-slate-200`} rel="noreferrer noopener" aria-label='View Full Project Archive'>
+                <Link href='/archive' className={`group font-semibold text-slate-200`} aria-label='View Full Project Archive'>
                     <span className='border-b border-solid border-transparent pb-px group-hover:border-teal-300 transition motion-reduce:transition-none'>
                         View Full Project Archive
                     </span>

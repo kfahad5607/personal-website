@@ -654,7 +654,7 @@ const Archive = () => {
     return (
         <div className="lg:py-24">
             <header>
-                <Link href="/" className='group inline-flex items-center leading-tight font-semibold text-teal-300 mb-2' rel="noreferrer noopener" aria-label=''>
+                <Link href="/" className='group inline-flex items-center leading-tight font-semibold text-teal-300 mb-2'>
                     <span className='inline-block mr-1 transition-transform group-hover:-translate-x-2 motion-reduce:transition-none'>
                         <ArrowIcon direction='left' />
                     </span>
