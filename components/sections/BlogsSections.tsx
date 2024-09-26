@@ -2,7 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import algoliaSearch from '@/public/images/algolia-search.webp'
 import headless from '@/public/images/headless.webp'
-import TitleWithLink from './ui/TitleWithLink'
+import TitleWithLink from '../ui/TitleWithLink'
 
 const blogs = [
     {

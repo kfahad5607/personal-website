@@ -1,5 +1,5 @@
 import React from 'react'
-import TextLink from './ui/TextLink'
+import TextLink from '../ui/TextLink'
 
 const AttributionSection = () => {
     return (

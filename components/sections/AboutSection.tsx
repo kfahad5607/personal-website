@@ -1,5 +1,5 @@
 import React, { forwardRef, ReactNode } from 'react'
-import TextLink from './ui/TextLink'
+import TextLink from '../ui/TextLink'
 
 interface Props {
     id: string;

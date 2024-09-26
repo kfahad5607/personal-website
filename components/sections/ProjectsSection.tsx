@@ -5,11 +5,11 @@ import courseCard from '@/public/images/course-card.webp'
 import spotifyProfile from '@/public/images/spotify-profile.webp'
 import halcyon from '@/public/images/halcyon.webp'
 import v4 from '@/public/images/v4.webp'
-import Badge from './ui/Badge'
-import LinkWithIcon from './ui/LinkWithIcon'
-import Description from './ui/Description'
-import TitleWithLink from './ui/TitleWithLink'
-import ArrowIcon from './icons/ArrowIcon'
+import Badge from '../ui/Badge'
+import LinkWithIcon from '../ui/LinkWithIcon'
+import Description from '../ui/Description'
+import TitleWithLink from '../ui/TitleWithLink'
+import ArrowIcon from '../icons/ArrowIcon'
 
 const projects = [
     {

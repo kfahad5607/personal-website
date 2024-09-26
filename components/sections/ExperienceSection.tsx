@@ -1,8 +1,8 @@
 import React, { forwardRef } from 'react'
-import Badge from './ui/Badge'
-import LinkWithIcon from './ui/LinkWithIcon'
-import Description from './ui/Description'
-import TitleWithLink from './ui/TitleWithLink'
+import Badge from '../ui/Badge'
+import LinkWithIcon from '../ui/LinkWithIcon'
+import Description from '../ui/Description'
+import TitleWithLink from '../ui/TitleWithLink'
 
 const experiences = [
     {
