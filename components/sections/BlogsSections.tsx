@@ -25,7 +25,7 @@ const blogs = [
 ]
 
 interface Props {
-    className: string
+    className?: string
 }
 
 const BlogsSections = ({ className = '' }: Props) => {

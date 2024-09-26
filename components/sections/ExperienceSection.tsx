@@ -103,7 +103,7 @@ const experiences = [
 
 interface Props {
     id: string;
-    className: string
+    className?: string
 }
 
 const ExperienceSection = forwardRef(({ id, className = '' }: Props, ref: React.Ref<HTMLElement>) => {

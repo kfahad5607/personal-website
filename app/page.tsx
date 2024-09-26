@@ -7,11 +7,13 @@ import BlogsSections from "@/components/sections/BlogsSections";
 import ExperienceSection from "@/components/sections/ExperienceSection";
 import ProjectsSection from "@/components/sections/ProjectsSection";
 import IntroSection from "@/components/sections/IntroSection";
+import SkillsSection from "@/components/sections/SkillsSection";
 
 export default function Home() {
   const aboutRef = useRef<HTMLElement>(null);
   const experienceRef = useRef<HTMLElement>(null);
   const projectsRef = useRef<HTMLElement>(null);
+  const skillsRef = useRef<HTMLElement>(null);
   const [currentSection, setCurrentSection] = useState<string>("about");
 
   useEffect(() => {
@@ -34,6 +36,7 @@ export default function Home() {
 
     observer.observe(aboutRef.current!);
     observer.observe(experienceRef.current!);
+    observer.observe(skillsRef.current!);
     observer.observe(projectsRef.current!);
 
     return () => {
@@ -45,6 +48,9 @@ export default function Home() {
 
       if (projectsRef.current)
         observer.unobserve(projectsRef.current);
+
+      if (skillsRef.current)
+        observer.unobserve(skillsRef.current);
 
       observer.disconnect();
     };
@@ -69,6 +75,8 @@ export default function Home() {
           ref={projectsRef}
           className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"
         />
+        <SkillsSection id="skills"
+          ref={skillsRef} className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24" />
         <BlogsSections className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24" />
         <AttributionSection />
       </main>

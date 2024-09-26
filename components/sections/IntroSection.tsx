@@ -14,6 +14,10 @@ const sections = [
         label: "projects",
         href: "#projects",
     },
+    {
+        label: "skills",
+        href: "#skills",
+    },
 ];
 
 interface Props {
