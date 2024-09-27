@@ -4,99 +4,42 @@ import LinkWithIcon from '../ui/LinkWithIcon'
 import Description from '../ui/Description'
 import TitleWithLink from '../ui/TitleWithLink'
 
-const experiences = [
+type Experience = {
+    startDate: string,
+    endDate: string,
+    designations: string[],
+    description: string,
+    projects: { url: string, label: string }[],
+    skills: string[],
+    company: {
+        name: string,
+        url: string
+    }
+}
+
+const experiences: Experience[] = [
     {
         startDate: '2024',
         endDate: 'present',
-        designations: ['Senior Frontend Engineer, Accessibility'],
+        designations: ['Software Engineer'],
         description: 'Build and maintain critical components used to construct Klaviyo’s frontend, across the whole product. Work closely with cross-functional teams, including developers, designers, and product managers, to implement and advocate for best practices in web accessibility.',
         projects: [],
-        skills: ['JavaScript', 'TypeScript', 'React', 'Storybook'],
+        skills: ['Python', 'Flask', 'PostgreSQL', 'MongoDB', 'Redis', 'RabbitMQ', 'Docker', 'React', 'TypeScript', 'AWS'],
         company: {
-            name: 'Klaviyo',
-            url: 'https://www.klaviyo.com/'
+            name: 'DNIF HYPERCLOUD',
+            url: 'https://www.dnif.it'
         }
     },
     {
-        startDate: '2018',
+        startDate: '2021',
         endDate: '2024',
-        designations: ['Lead Engineer', 'Senior Engineer', 'Engineer'],
+        designations: ['Full-Stack Developer', 'Web Developer'],
         description: 'Build, style, and ship high-quality websites, design systems, mobile apps, and digital experiences for a diverse array of projects for clients including Harvard Business School, Everytown for Gun Safety, Pratt Institute, Koala Health, Vanderbilt University, The 19th News, and more. Provide leadership within engineering department through close collaboration, knowledge shares, and spearheading the development of internal tools.',
         projects: [],
-        skills: ['JavaScript', 'TypeScript', 'HTML & SCSS', 'React', 'Next.js', 'React Native', 'Wordpress', 'Contentful', 'Node.js', 'php'],
+        skills: ['React.js', 'Vue.js', 'TypeScript', 'Node.js', 'Django', 'Python', 'MySQL', 'AWS', 'Docker', 'GitHub Actions'],
         company: {
-            name: 'Upstatement',
-            url: 'https://upstatement.com/'
-        }
-    },
-    {
-        startDate: 'july',
-        endDate: 'dec 2017',
-        designations: ['UI Engineer Co op'],
-        description: 'Developed and styled interactive web apps for Apple Music, including the user interface of Apple Music’s embeddable web player widget for in-browser user authorization and full song playback.',
-        projects: [
-            {
-                label: 'MusicKit.js',
-                url: 'https://js-cdn.music.apple.com/musickit/v3/docs/index.html?path=/story/introduction--page'
-            },
-            {
-                label: '9to5Mac',
-                url: 'https://9to5mac.com/2018/06/03/apple-music-embeddable-web-player-listen-browser/'
-            },
-            {
-                label: 'The Verge',
-                url: 'https://www.theverge.com/2017/10/5/16433770/facebook-messenger-apple-music-bot-song-streaming'
-            }
-        ],
-        skills: ['Ember', 'SCSS', 'JavaScript', 'MusicKit.js'],
-        company: {
-            name: 'Apple',
-            url: 'https://www.apple.com/apple-music/'
-        }
-    },
-    {
-        startDate: '2016',
-        endDate: '2017',
-        designations: ['Developer'],
-        description: 'Collaborated with other student designers and engineers on pro-bono projects to create new brands, design systems, and websites for organizations in the community.',
-        projects: [],
-        skills: ['Jekyll', 'SCSS', 'JavaScript', 'Wordpress'],
-        company: {
-            name: 'Scout Studio',
-            url: 'https://scout.camd.northeastern.edu/'
-        }
-    },
-    {
-        startDate: 'july',
-        endDate: 'dec 2016',
-        designations: ['Software Engineer Co-op'],
-        description: 'Worked with the UI team to engineer and improve major features of Starry’s customer-facing Android app.',
-        projects: [
-            {
-                label: 'Andriod App',
-                url: 'https://play.google.com/store/apps/details?id=com.starry.management&hl=en_US&gl=US&pli=1'
-            },
-            {
-                label: 'ScreenTime 2.0',
-                url: 'https://starry.com/blog/product/whats-new-screentime-just-got-better-for-parents'
-            }
-        ],
-        skills: ['Cordova', 'Backbone', 'JavaScript', 'CSS'],
-        company: {
-            name: 'Starry',
-            url: 'https://starry.com/'
-        }
-    },
-    {
-        startDate: 'july',
-        endDate: 'dec 2015',
-        designations: ['Creative Technologist Co-op'],
-        description: 'Developed, maintained, and shipped production code for client websites. Clients included JetBlue, Lovesac, U.S. Cellular, U.S. Department of Defense, and more.',
-        projects: [],
-        skills: ['HTML', 'CSS', 'JavaScript', 'jQuery'],
-        company: {
-            name: 'MullenLowe',
-            url: 'https://us.mullenlowe.com/'
+            name: 'Zilliobit Interactive',
+            url: 'https://zilliobit.com'
         }
     }
 ]

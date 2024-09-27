@@ -30,14 +30,13 @@ const IntroSection = ({ currentSection }: Props) => {
             <div>
                 <div>
                     <h1 className="text-4xl font-bold text-slate-200 tracking-tight sm:text-5xl">
-                        <Link href="/">Brittany Chiang</Link>
+                        <Link href="/">Fahad Khan</Link>
                     </h1>
                     <h2 className="text-lg font-medium text-slate-200 tracking-tight mt-3 sm:text-xl">
-                        Senior Frontend Engineer
+                        Software Engineer
                     </h2>
                     <p className="mt-4 max-w-xs leading-normal">
-                        I build pixel-perfect, engaging, and accessible digital
-                        experiences.
+                        Engineer at heart, building performant products and embracing lifelong learning.
                     </p>
                 </div>
                 <nav
@@ -68,12 +67,12 @@ const IntroSection = ({ currentSection }: Props) => {
             >
                 <li>
                     <Link
-                        href="#"
+                        href="https://github.com/kfahad5607"
                         className="block hover:text-slate-200 transition-colors"
                         target="_blank"
                         rel="noreferrer noopener"
                         aria-label="GitHub (opens in a new tab)"
-                        title="Github"
+                        title="GitHub"
                     >
                         <div className="sr-only">Github</div>
                         <svg
@@ -89,7 +88,7 @@ const IntroSection = ({ currentSection }: Props) => {
                 </li>
                 <li>
                     <Link
-                        href="#"
+                        href="https://www.linkedin.com/in/fahad-khan-6050b0152"
                         className="block hover:text-slate-200 transition-colors"
                         target="_blank"
                         rel="noreferrer noopener"
@@ -110,7 +109,7 @@ const IntroSection = ({ currentSection }: Props) => {
                 </li>
                 <li>
                     <Link
-                        href="#"
+                        href="https://x.com/kfahad5607"
                         className="block hover:text-slate-200 transition-colors"
                         target="_blank"
                         rel="noreferrer noopener"
@@ -134,14 +133,12 @@ const IntroSection = ({ currentSection }: Props) => {
                 </li>
                 <li>
                     <Link
-                        href="#"
+                        href="mailto:kfahad5607@gmail.com"
                         className="block hover:text-slate-200 transition-colors"
-                        target="_blank"
-                        rel="noreferrer noopener"
-                        aria-label="Twitter (opens in a new tab)"
-                        title="Twitter"
+                        aria-label="Email"
+                        title="Email"
                     >
-                        <div className="sr-only">Twitter</div>
+                        <div className="sr-only">Email</div>
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             fill="currentColor"
