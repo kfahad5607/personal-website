@@ -4,9 +4,40 @@ import "./globals.css";
 import LayoutClient from "./layout-client";
 
 const inter = localFont({
-  src: '../public/fonts/Inter-4.0/web/InterVariable.woff2',
+  src: [
+    {
+      path: '../public/fonts/Inter-4.0/web/Inter-Regular.woff2',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: '../public/fonts/Inter-4.0/web/Inter-Medium.woff2',
+      weight: '500',
+      style: 'normal',
+    },
+    {
+      path: '../public/fonts/Inter-4.0/web/Inter-SemiBold.woff2',
+      weight: '600',
+      style: 'normal',
+    },
+    {
+      path: '../public/fonts/Inter-4.0/web/Inter-Bold.woff2',
+      weight: '700',
+      style: 'normal',
+    },
+    {
+      path: '../public/fonts/Inter-4.0/web/Inter-ExtraBold.woff2',
+      weight: '800',
+      style: 'normal',
+    },
+    {
+      path: '../public/fonts/Inter-4.0/web/Inter-Black.woff2',
+      weight: '900',
+      style: 'normal',
+    }
+  ],
   variable: '--font-inter',
-  display: 'swap',
+  display: 'swap'
 })
 
 
