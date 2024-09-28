@@ -1,6 +1,6 @@
 "use client"
 import Link from 'next/link'
-import React, { MouseEvent, useRef, useState } from 'react'
+import React, { MouseEvent, useState } from 'react'
 
 interface Props {
   children: React.ReactNode

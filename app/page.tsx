@@ -3,7 +3,6 @@
 import { useEffect, useRef, useState } from "react";
 import AboutSection from "@/components/sections/AboutSection";
 import AttributionSection from "@/components/sections/AttributionSection";
-import BlogsSections from "@/components/sections/BlogsSections";
 import ExperienceSection from "@/components/sections/ExperienceSection";
 import ProjectsSection from "@/components/sections/ProjectsSection";
 import IntroSection from "@/components/sections/IntroSection";
@@ -34,23 +33,28 @@ export default function Home() {
       }
     );
 
+    const aboutRefCurrent = aboutRef.current;
+    const experienceRefCurrent = experienceRef.current;
+    const projectsRefCurrent = projectsRef.current;
+    const skillsRefCurrent = skillsRef.current;
+
     observer.observe(aboutRef.current!);
     observer.observe(experienceRef.current!);
-    observer.observe(skillsRef.current!);
     observer.observe(projectsRef.current!);
+    observer.observe(skillsRef.current!);
 
     return () => {
-      if (aboutRef.current)
-        observer.unobserve(aboutRef.current);
+      if (aboutRefCurrent)
+        observer.unobserve(aboutRefCurrent);
 
-      if (experienceRef.current)
-        observer.unobserve(experienceRef.current);
+      if (experienceRefCurrent)
+        observer.unobserve(experienceRefCurrent);
 
-      if (projectsRef.current)
-        observer.unobserve(projectsRef.current);
+      if (projectsRefCurrent)
+        observer.unobserve(projectsRefCurrent);
 
-      if (skillsRef.current)
-        observer.unobserve(skillsRef.current);
+      if (skillsRefCurrent)
+        observer.unobserve(skillsRefCurrent);
 
       observer.disconnect();
     };
@@ -77,7 +81,6 @@ export default function Home() {
         />
         <SkillsSection id="skills"
           ref={skillsRef} className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24" />
-        {/* <BlogsSections className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24" /> */}
         <AttributionSection />
       </main>
       <div></div>

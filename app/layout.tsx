@@ -47,6 +47,7 @@ export const viewport: Viewport = {
 }
 
 export const metadata: Metadata = {
+  metadataBase: new URL('http://localhost:3000'),
   title: "Fahad Khan",
   description: "Fahad Khan is a software engineer who builds user-centric, scalable web products.",
   creator: 'Fahad Khan',

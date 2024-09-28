@@ -44,7 +44,7 @@ const IntroSection = ({ currentSection }: Props) => {
                     aria-label="In-page jump links"
                 >
                     <ul className="w-max">
-                        {sections.map((section, sectionIdx) => (
+                        {sections.map((section) => (
                             <li key={section.href}>
                                 <Link
                                     href={section.href}
