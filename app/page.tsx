@@ -77,7 +77,7 @@ export default function Home() {
         />
         <SkillsSection id="skills"
           ref={skillsRef} className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24" />
-        <BlogsSections className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24" />
+        {/* <BlogsSections className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24" /> */}
         <AttributionSection />
       </main>
       <div></div>

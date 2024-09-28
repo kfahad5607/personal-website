@@ -2,6 +2,7 @@ import React, { FC } from 'react'
 import Link from 'next/link'
 import URLIcon from '../icons/URLIcon';
 import StarIcon from '../icons/StarIcon';
+import GithubIcon from '../icons/GitHubIcon';
 import DownloadIcon from '../icons/DownloadIcon';
 
 interface Props {
@@ -13,6 +14,7 @@ interface Props {
 const ICONS: Record<Props['icon'], FC> = {
     url: URLIcon,
     star: StarIcon,
+    github: GithubIcon,
     download: DownloadIcon,
 }
 

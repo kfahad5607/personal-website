@@ -1,7 +1,12 @@
 import React, { forwardRef } from 'react'
 import Badge from '../ui/Badge'
 
-const skillsList = [
+type Skill = {
+    category: string,
+    skills: string[]
+}
+
+const skillsList: Skill[] = [
     {
         category: "Frontend",
         skills: ["Next.js", "React.js", "Vue.js", "JavaScript", "TypeScript"]

@@ -1,73 +1,75 @@
 import React, { forwardRef } from 'react'
 import Link from 'next/link'
-import Image from 'next/image'
-import courseCard from '@/public/images/course-card.webp'
-import spotifyProfile from '@/public/images/spotify-profile.webp'
-import halcyon from '@/public/images/halcyon.webp'
-import v4 from '@/public/images/v4.webp'
+import Image, { StaticImageData } from 'next/image'
+import placeprep from '@/public/images/placeprep.webp'
+import cricketScorer from '@/public/images/cricket-scorer.webp'
+import contactKeeper from '@/public/images/contact-keeper.webp'
 import Badge from '../ui/Badge'
 import LinkWithIcon from '../ui/LinkWithIcon'
 import Description from '../ui/Description'
 import TitleWithLink from '../ui/TitleWithLink'
 import ArrowIcon from '../icons/ArrowIcon'
 
-const projects = [
+type StatIcon = "star" | "download" | "github"
+
+type Project = {
+    title: string,
+    url: string,
+    thumbnail: {
+        url: StaticImageData,
+        altText: string
+    },
+    description: string,
+    skills: string[],
+    stats: { icon: StatIcon, text: string, url: string } | null
+}
+
+const projects: Project[] = [
     {
-        title: 'Build a Spotify Connected App',
-        url: 'https://www.newline.co/courses/build-a-spotify-connected-app',
+        title: 'PlacePrep',
+        url: 'https://www.youtube.com/watch?v=eYJRO9IgCms',
         thumbnail: {
-            url: courseCard,
-            altText: 'Build a Spotify Connected App Newline course marketing card'
+            url: placeprep,
+            altText: 'PlacePrep for acing engineering interviews'
         },
-        description: 'Video course that teaches how to build a web app with the Spotify Web API. Topics covered include the principles of REST APIs, user auth flows, Node, Express, React, Styled Components, and more.',
-        skills: [],
-        stats: null
+        description: 'A MERN-based platform built to assist engineering students in interview prep with quizzes, aptitude tests, and coding challenges. It includes an in-browser compiler supporting Java, Python, C, and C++ for seamless coding practice right on the site.',
+        skills: ['React.js', 'Redux', 'Bootstrap', 'Express.js', 'MongoDB', 'linux'],
+        stats: {
+            icon: 'github',
+            text: 'Source Code',
+            url: 'https://github.com/kfahad5607/placeprep'
+        }
     },
     {
-        title: 'Spotify Profile',
-        url: 'https://spotify-profile.herokuapp.com/',
+        title: 'Cricket Scorer',
+        url: 'https://quirky-panini-a0df5c.netlify.app',
         thumbnail: {
-            url: spotifyProfile,
+            url: cricketScorer,
             altText: 'Spotify Profile app homepage'
         },
-        description: 'Web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more.',
-        skills: ['React', 'Express', 'Spotify API', 'Heroku'],
+        description: 'A React JS app where players can record and update scores for their cricket games. It uses React Context for efficient score tracking throughout the match.',
+        skills: ['React.js', 'React Context', 'Bootstrap'],
         stats: {
-            icon: 'star',
-            text: '648',
-            url: 'https://github.com/bchiang7/spotify-profile'
+            icon: 'github',
+            text: 'Source Code',
+            url: 'https://github.com/kfahad5607/Cricket-scorer'
         }
     },
     {
-        title: 'Halcyon Theme',
-        url: 'https://halcyon-theme.netlify.app/',
+        title: 'Contact Keeper',
+        url: 'https://contact-keeper-tzui.onrender.com',
         thumbnail: {
-            url: halcyon,
+            url: contactKeeper,
             altText: 'Halcyon Theme homepage hero with screenshot of VS Code editor'
         },
-        description: 'Minimal dark blue theme for VS Code, Sublime Text, Atom, iTerm, and more.',
-        skills: [],
+        description: 'A MERN app for securely storing and managing contact information. With JWT authentication, it ensures user data is protected while providing a seamless experience for adding, editing, and organizing contacts.',
+        skills: ['React.js', 'Redux', 'Bootstrap', 'Express.js', 'MongoDB'],
         stats: {
-            icon: 'download',
-            text: '100k+ Installs',
-            url: 'https://marketplace.visualstudio.com/items?itemName=brittanychiang.halcyon-vscode'
+            icon: 'github',
+            text: 'Source Code',
+            url: 'https://github.com/kfahad5607/contact-keeper'
         }
-    },
-    {
-        title: 'brittanychiang.com (v4)',
-        url: 'https://v4.brittanychiang.com/',
-        thumbnail: {
-            url: v4,
-            altText: 'brittanychiang.com version 4 hero section'
-        },
-        description: 'An old portfolio site built with Gatsby with 6k+ stars and 3k+ forks.',
-        skills: ['Gatsby', 'Styled Components', 'Netlify'],
-        stats: {
-            icon: 'star',
-            text: '7,479',
-            url: 'https://github.com/bchiang7/v4'
-        }
-    },
+    }
 ]
 
 interface Props {

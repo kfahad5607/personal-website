@@ -1,10 +1,20 @@
 import React from 'react'
-import Image from 'next/image'
+import Image, { StaticImageData } from 'next/image'
 import algoliaSearch from '@/public/images/algolia-search.webp'
 import headless from '@/public/images/headless.webp'
 import TitleWithLink from '../ui/TitleWithLink'
 
-const blogs = [
+type Blog = {
+    title: string,
+    date: string,
+    url: string,
+    thumbnail: {
+        url: StaticImageData,
+        altText: string
+    }
+}
+
+const blogs: Blog[] = [
     {
         title: 'Integrating Algolia Search with WordPress Multisite',
         date: '2020',
@@ -13,7 +23,8 @@ const blogs = [
             url: algoliaSearch,
             altText: 'Telescope'
         },
-    }, {
+    },
+    {
         title: 'Building a Headless Mobile App CMS From Scratch',
         date: '2020',
         url: 'https://upstatement.com/blog/building-a-headless-mobile-app-cms-from-scratch/',

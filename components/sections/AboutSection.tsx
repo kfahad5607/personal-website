@@ -18,7 +18,7 @@ const AboutSection = forwardRef(({ id, className = '' }: Props, ref: React.Ref<H
 
             <p className="mb-4">I’ve always loved building products. I started with <TextLink href='https://www.youtube.com/watch?v=eYJRO9IgCms' label='PlacePrep' ariaLabel='PlacePrep (opens in a new tab)' className='text-slate-200' /> in engineering and later created <TextLink href='https://zeltoauthoring.com' label='ZeltoAuthoring' ariaLabel='ZeltoAuthoring (opens in a new tab)' className='text-slate-200' /> at my first job, where I also handled AWS deployments and set up CI/CD. Now, I’m working on the Next-Gen SIEM at <TextLink href='https://www.dnif.it/' label='DNIF' ariaLabel='DNIF Hypercloud (opens in a new tab)' className='text-slate-200' />, building secure scalable systems. I’m always curious to dive deeper into tech, and lately, I’ve been focusing on Next.js, Python, and sharpening my fundamentals in OS, Databases, and Networks.
             </p>
-            <p >When I’m not coding, I’m probably playing cricket, hanging out with friends, listening to podcasts, or enjoying some <TextLink href='https://open.spotify.com/genre/0JQ5DAqbMKFKSopHMaeIeI' label='Punjabi music' ariaLabel='Punjabi Music (opens in a new tab)' className='text-slate-200' />.</p>
+            <p >When I’m not coding, I’m probably playing cricket, hanging out with friends, listening to podcasts, or enjoying some <TextLink href='https://open.spotify.com/genre/0JQ5DAqbMKFKSopHMaeIeI' label='music' ariaLabel='Punjabi Music (opens in a new tab)' className='text-slate-200' />.</p>
         </div>
     </section>
 })
