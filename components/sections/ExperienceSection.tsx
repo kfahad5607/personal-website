@@ -22,9 +22,9 @@ const experiences: Experience[] = [
         startDate: '2024',
         endDate: 'present',
         designations: ['Software Engineer'],
-        description: 'Build and maintain critical components used to construct Klaviyo’s frontend, across the whole product. Work closely with cross-functional teams, including developers, designers, and product managers, to implement and advocate for best practices in web accessibility.',
+        description: 'Built a parser to validate and convert a custom query language to Spark SQL using Python. Created a log forwarding service with RabbitMQ for sending logs to external sources, along with a webhook endpoint supporting various authentication methods, including bearer, basic, and HMAC, to enable high-volume log ingestion. Additionally, I created complex data visualization UI components to enhance the comprehensibility of various analytics.',
         projects: [],
-        skills: ['Python', 'Flask', 'PostgreSQL', 'MongoDB', 'Redis', 'RabbitMQ', 'Docker', 'React', 'TypeScript', 'AWS'],
+        skills: ['Python', 'Flask', 'PostgreSQL', 'MongoDB', 'Redis', 'RabbitMQ', 'Docker', 'React.js', 'TypeScript', 'AWS'],
         company: {
             name: 'DNIF HYPERCLOUD',
             url: 'https://www.dnif.it'
@@ -34,8 +34,13 @@ const experiences: Experience[] = [
         startDate: '2021',
         endDate: '2024',
         designations: ['Full-Stack Developer', 'Web Developer'],
-        description: 'Build, style, and ship high-quality websites, design systems, mobile apps, and digital experiences for a diverse array of projects for clients including Harvard Business School, Everytown for Gun Safety, Pratt Institute, Koala Health, Vanderbilt University, The 19th News, and more. Provide leadership within engineering department through close collaboration, knowledge shares, and spearheading the development of internal tools.',
-        projects: [],
+        description: 'Built a low-code authoring tool for creating courses, focusing on the design and implementation of interactive, responsive, and accessible UI components. Implemented features like live editing, drag-and-drop functionality, and user authentication, integrating Stripe for payments. Additionally, Architected and deployed the entire product on AWS, leveraging services like EC2, Lambda, S3, RDS, and CloudFront, and created a CI/CD pipeline using GitHub Actions',
+        projects: [
+            {
+                label: 'ZeltoAuthoring',
+                url: 'https://zeltoauthoring.com'
+            }
+        ],
         skills: ['React.js', 'Vue.js', 'TypeScript', 'Node.js', 'Django', 'Python', 'MySQL', 'AWS', 'Docker', 'GitHub Actions'],
         company: {
             name: 'Zilliobit Interactive',
