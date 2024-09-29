@@ -12,7 +12,7 @@ const skillsList: Skill[] = [
         skills: ["Next.js", "React.js", "Vue.js", "JavaScript", "TypeScript"]
     },
     {
-        category: "Backend & Database",
+        category: "Backend",
         skills: ["Node.js", "Python", "Django", "Flask"]
     },
     {
