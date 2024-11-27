@@ -18,36 +18,61 @@ type Experience = {
 }
 
 const experiences: Experience[] = [
-    {
-        startDate: '2024',
-        endDate: 'present',
-        designations: ['Software Engineer'],
-        description: 'Built a parser to validate and convert a custom query language to Spark SQL using Python. Created a log forwarding service with RabbitMQ for sending logs to external sources, along with a webhook endpoint supporting various authentication methods, including bearer, basic, and HMAC, to enable high-volume log ingestion. Additionally, I created complex data visualization UI components to enhance the comprehensibility of various analytics.',
-        projects: [],
-        skills: ['Python', 'Flask', 'PostgreSQL', 'MongoDB', 'Redis', 'RabbitMQ', 'Docker', 'React.js', 'TypeScript', 'AWS'],
-        company: {
-            name: 'DNIF HYPERCLOUD',
-            url: 'https://www.dnif.it'
-        }
+  {
+    startDate: "2024",
+    endDate: "present",
+    designations: ["Software Engineer"],
+    description:
+      "Responsible for developing scalable, high-performance features, including a Python-based query language parser for SQL, a log forwarding service using RabbitMQ, and a secure webhook endpoint supporting multiple authentication methods. I built interactive data visualization components with React and TypeScript, improving the usability of security analytics. To optimize performance, I integrated Redis for caching and used React Query for efficient data fetching, reducing load on PostgreSQL and enhancing system responsiveness. I owned the full development lifecycle of these features, working closely with cross-functional teams to ensure stability and meet customer requirements.",
+    projects: [],
+    skills: [
+      "React.js",
+      "TypeScript",
+      "Python",
+      "Flask",
+      "PostgreSQL",
+      "MongoDB",
+      "Redis",
+      "RabbitMQ",
+      "Celery",
+      "Docker",
+      "AWS",
+    ],
+    company: {
+      name: "DNIF HYPERCLOUD",
+      url: "https://www.dnif.it",
     },
-    {
-        startDate: '2021',
-        endDate: '2024',
-        designations: ['Full-Stack Developer', 'Web Developer'],
-        description: 'Built a low-code authoring tool for creating courses, focusing on the design and implementation of interactive, responsive, and accessible UI components. Implemented features like live editing, drag-and-drop functionality, and user authentication, integrating Stripe for payments. Additionally, Architected and deployed the entire product on AWS, leveraging services like EC2, Lambda, S3, RDS, and CloudFront, and created a CI/CD pipeline using GitHub Actions',
-        projects: [
-            {
-                label: 'ZeltoAuthoring',
-                url: 'https://zeltoauthoring.com'
-            }
-        ],
-        skills: ['React.js', 'Vue.js', 'TypeScript', 'Node.js', 'Django', 'Python', 'MySQL', 'AWS', 'Docker', 'GitHub Actions'],
-        company: {
-            name: 'Zilliobit Interactive',
-            url: 'https://zilliobit.com'
-        }
-    }
-]
+  },
+  {
+    startDate: "2021",
+    endDate: "2024",
+    designations: ["Full-Stack Developer", "Web Developer"],
+    description:
+      "Built a low-code authoring tool for creating courses, focusing on the design and implementation of interactive, responsive, and accessible UI components. Implemented features like live editing, drag-and-drop functionality, and user authentication, integrating Stripe for payments. Additionally, Architected and deployed the entire product on AWS, leveraging services like EC2, Lambda, S3, RDS, and CloudFront, and created a CI/CD pipeline using GitHub Actions",
+    projects: [
+      {
+        label: "ZeltoAuthoring",
+        url: "https://zeltoauthoring.com",
+      },
+    ],
+    skills: [
+      "React.js",
+      "Vue.js",
+      "TypeScript",
+      "Node.js",
+      "Django",
+      "Python",
+      "MySQL",
+      "AWS",
+      "Docker",
+      "GitHub Actions",
+    ],
+    company: {
+      name: "Zilliobit Interactive",
+      url: "https://zilliobit.com",
+    },
+  },
+];
 
 interface Props {
     id: string;

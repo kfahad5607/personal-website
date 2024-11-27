@@ -7,22 +7,30 @@ type Skill = {
 }
 
 const skillsList: Skill[] = [
-    {
-        category: "Frontend",
-        skills: ["Next.js", "React.js", "Vue.js", "JavaScript", "TypeScript"]
-    },
-    {
-        category: "Backend",
-        skills: ["Node.js", "Python", "Django", "Flask"]
-    },
-    {
-        category: "Database & Message Brokers",
-        skills: ["PostgreSQL", "MySQL", "MongoDB", "Redis", "RabbitMQ"]
-    },
-    {
-        category: "Cloud & DevOps",
-        skills: ["AWS EC2", "AWS RDS", "AWS Lambda", "AWS S3", "Docker", "Kubernetes", "GitHub Actions"]
-    }
+  {
+    category: "Frontend",
+    skills: ["Next.js", "React.js", "Vue.js", "JavaScript", "TypeScript"],
+  },
+  {
+    category: "Backend",
+    skills: ["Node.js", "Python", "Django", "Flask", "Celery"],
+  },
+  {
+    category: "Database & Message Brokers",
+    skills: ["PostgreSQL", "MySQL", "MongoDB", "Redis", "RabbitMQ"],
+  },
+  {
+    category: "Cloud & DevOps",
+    skills: [
+      "AWS EC2",
+      "AWS RDS",
+      "AWS Lambda",
+      "AWS S3",
+      "Docker",
+      "Kubernetes",
+      "GitHub Actions",
+    ],
+  },
 ];
 
 
