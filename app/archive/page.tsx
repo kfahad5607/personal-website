@@ -16,38 +16,66 @@ type Project = {
 }
 
 const projects: Project[] = [
-    {
-        year: 2021,
-        title: 'PlacePrep',
-        madeAt: "College",
-        skills: ['React.js', 'Redux', 'Bootstrap', 'Express.js', 'MongoDB', 'linux'],
-        link: {
-            url: "https://www.youtube.com/watch?v=eYJRO9IgCms",
-            label: "PlacePrep"
-        }
+  {
+    year: 2024,
+    title: "Cricbuzz Clone (Work in Progress)",
+    madeAt: "Personal Project",
+    skills: [
+      "React.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "React Query",
+      "Node.js",
+      "Express.js",
+      "PostgreSQL",
+      "MongoDB",
+      "Python",
+      "Web Scraping",
+    ],
+    link: {
+      url: "https://github.com/kfahad5607/cricbuzz-clone",
+      label: "Cricbuzz Clone",
     },
-    {
-        year: 2020,
-        title: 'Cricket Scorer',
-        madeAt: "College",
-        skills: ['React.js', 'React Context', 'Bootstrap'],
+  },
+  {
+    year: 2021,
+    title: "PlacePrep",
+    madeAt: "College",
+    skills: [
+      "React.js",
+      "Redux",
+      "Bootstrap",
+      "Express.js",
+      "MongoDB",
+      "linux",
+    ],
+    link: {
+      url: "https://www.youtube.com/watch?v=eYJRO9IgCms",
+      label: "PlacePrep",
+    },
+  },
+  {
+    year: 2020,
+    title: "Cricket Scorer",
+    madeAt: "College",
+    skills: ["React.js", "React Context", "Bootstrap"],
 
-        link: {
-            url: "https://quirky-panini-a0df5c.netlify.app",
-            label: "Cricket Scorer"
-        }
+    link: {
+      url: "https://quirky-panini-a0df5c.netlify.app",
+      label: "Cricket Scorer",
     },
-    {
-        year: 2020,
-        title: 'Contact Keeper',
-        madeAt: "College",
-        skills: ['React.js', 'Redux', 'Bootstrap', 'Express.js', 'MongoDB'],
-        link: {
-            url: "https://contact-keeper-tzui.onrender.com",
-            label: 'Contact Keeper',
-        }
-    }
-]
+  },
+  {
+    year: 2020,
+    title: "Contact Keeper",
+    madeAt: "College",
+    skills: ["React.js", "Redux", "Bootstrap", "Express.js", "MongoDB"],
+    link: {
+      url: "https://contact-keeper-tzui.onrender.com",
+      label: "Contact Keeper",
+    },
+  },
+];
 
 const Archive = () => {
     return (

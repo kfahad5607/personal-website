@@ -1,9 +1,9 @@
 import React, { forwardRef } from 'react'
 import Link from 'next/link'
 import Image, { StaticImageData } from 'next/image'
+import cricbuzzClone from "@/public/images/cricbuzz-clone.webp";
 import placeprep from '@/public/images/placeprep.webp'
-import cricketScorer from '@/public/images/cricket-scorer.webp'
-import contactKeeper from '@/public/images/contact-keeper.webp'
+import cricketScorer from "@/public/images/cricket-scorer.webp";
 import Badge from '../ui/Badge'
 import LinkWithIcon from '../ui/LinkWithIcon'
 import Description from '../ui/Description'
@@ -25,52 +25,73 @@ type Project = {
 }
 
 const projects: Project[] = [
-    {
-        title: 'PlacePrep',
-        url: 'https://www.youtube.com/watch?v=eYJRO9IgCms',
-        thumbnail: {
-            url: placeprep,
-            altText: 'PlacePrep for acing engineering interviews'
-        },
-        description: 'A MERN-based platform built to assist engineering students in interview prep with quizzes, aptitude tests, and coding challenges. It includes an in-browser compiler supporting Java, Python, C, and C++ for seamless coding practice right on the site.',
-        skills: ['React.js', 'Redux', 'Bootstrap', 'Express.js', 'MongoDB', 'linux'],
-        stats: {
-            icon: 'github',
-            text: 'Source Code',
-            url: 'https://github.com/kfahad5607/placeprep'
-        }
+  {
+    title: "Cricbuzz Clone (Work in Progress)",
+    url: "https://github.com/kfahad5607/cricbuzz-clone",
+    thumbnail: {
+      url: cricbuzzClone,
+      altText: "Cricbuzz Clone",
     },
-    {
-        title: 'Cricket Scorer',
-        url: 'https://quirky-panini-a0df5c.netlify.app',
-        thumbnail: {
-            url: cricketScorer,
-            altText: 'Spotify Profile app homepage'
-        },
-        description: 'A React JS app where players can record and update scores for their cricket games. It uses React Context for efficient score tracking throughout the match.',
-        skills: ['React.js', 'React Context', 'Bootstrap'],
-        stats: {
-            icon: 'github',
-            text: 'Source Code',
-            url: 'https://github.com/kfahad5607/Cricket-scorer'
-        }
+    description:
+      "The Cricbuzz Clone highlights my full-stack development skills, combining a robust backend built with Node.js, TypeScript, Express, MongoDB, and PostgreSQL with a dynamic and responsive frontend using React.js, TypeScript, Tailwind CSS, and React Query. I designed and implemented scalable APIs to manage user data, match statistics, and real-time updates while ensuring seamless integration with the frontend. The user-facing interface is complete, and I am currently working on an admin dashboard to extend platform capabilities. This project demonstrates my ability to deliver complete, high-quality applications across the stack.",
+    skills: [
+      "React.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "React Query",
+      "Node.js",
+      "Express.js",
+      "PostgreSQL",
+      "MongoDB",
+      "Python",
+      "Web Scraping",
+    ],
+    stats: {
+      icon: "github",
+      text: "Source Code",
+      url: "https://github.com/kfahad5607/cricbuzz-clone",
     },
-    {
-        title: 'Contact Keeper',
-        url: 'https://contact-keeper-tzui.onrender.com',
-        thumbnail: {
-            url: contactKeeper,
-            altText: 'Halcyon Theme homepage hero with screenshot of VS Code editor'
-        },
-        description: 'A MERN app for securely storing and managing contact information. With JWT authentication, it ensures user data is protected while providing a seamless experience for adding, editing, and organizing contacts.',
-        skills: ['React.js', 'Redux', 'Bootstrap', 'Express.js', 'MongoDB'],
-        stats: {
-            icon: 'github',
-            text: 'Source Code',
-            url: 'https://github.com/kfahad5607/contact-keeper'
-        }
-    }
-]
+  },
+  {
+    title: "PlacePrep",
+    url: "https://www.youtube.com/watch?v=eYJRO9IgCms",
+    thumbnail: {
+      url: placeprep,
+      altText: "PlacePrep for acing engineering interviews",
+    },
+    description:
+      "A MERN-based platform built to assist engineering students in interview prep with quizzes, aptitude tests, and coding challenges. It includes an in-browser compiler supporting Java, Python, C, and C++ for seamless coding practice right on the site.",
+    skills: [
+      "React.js",
+      "Redux",
+      "Bootstrap",
+      "Express.js",
+      "MongoDB",
+      "linux",
+    ],
+    stats: {
+      icon: "github",
+      text: "Source Code",
+      url: "https://github.com/kfahad5607/placeprep",
+    },
+  },
+  {
+    title: "Cricket Scorer",
+    url: "https://quirky-panini-a0df5c.netlify.app",
+    thumbnail: {
+      url: cricketScorer,
+      altText: "Spotify Profile app homepage",
+    },
+    description:
+      "A React JS app where players can record and update scores for their cricket games. It uses React Context for efficient score tracking throughout the match.",
+    skills: ["React.js", "React Context", "Bootstrap"],
+    stats: {
+      icon: "github",
+      text: "Source Code",
+      url: "https://github.com/kfahad5607/Cricket-scorer",
+    },
+  },
+];
 
 interface Props {
     id: string;
