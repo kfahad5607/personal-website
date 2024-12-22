@@ -23,7 +23,7 @@ const experiences: Experience[] = [
     endDate: "present",
     designations: ["Software Engineer"],
     description:
-      "Responsible for developing scalable, high-performance features, including a Python-based query language parser for SQL, a log forwarding service using RabbitMQ, and a secure webhook endpoint supporting multiple authentication methods. I built interactive data visualization components with React and TypeScript, improving the usability of security analytics. To optimize performance, I integrated Redis for caching and used React Query for efficient data fetching, reducing load on PostgreSQL and enhancing system responsiveness. I owned the full development lifecycle of these features, working closely with cross-functional teams to ensure stability and meet customer requirements.",
+      "Designed and implemented a log ingestion and transformation service capable of handling 20,000 events per second and processing up to 1 TB of data daily. Built the Bulk Audit Logs Downloader, a scalable service that efficiently handles tens of gigabytes of log downloads using Celery with Redis to process large queries asynchronously and upload results to AWS S3. Developed a Python-based query parser to validate and convert custom queries to SQL. Built interactive data visualization components with React and TypeScript, enhancing the usability of security analytics dashboards. Additionally, implemented periodic data fetching for analytics and multi-page caching on the browser using React Query to minimize unnecessary backend calls and improve performance.",
     projects: [],
     skills: [
       "React.js",
