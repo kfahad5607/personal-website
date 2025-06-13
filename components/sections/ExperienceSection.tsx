@@ -23,12 +23,13 @@ const experiences: Experience[] = [
     endDate: "present",
     designations: ["Software Engineer"],
     description:
-      "Designed and implemented a log ingestion and transformation service capable of handling 20,000 events per second and processing up to 1 TB of data daily. Built the Bulk Audit Logs Downloader, a scalable service that efficiently handles tens of gigabytes of log downloads using Celery with Redis to process large queries asynchronously and upload results to AWS S3. Developed a Python-based query parser to validate and convert custom queries to SQL. Built interactive data visualization components with React and TypeScript, enhancing the usability of security analytics dashboards. Additionally, implemented periodic data fetching for analytics and multi-page caching on the browser using React Query to minimize unnecessary backend calls and improve performance.",
+      "I’m a Senior Software Engineer with a strong focus on building scalable and cost-efficient systems. I led the migration of a distributed SIEM platform to a Kubernetes-based architecture with autoscaling workloads, which reduced AWS compute costs by 40 percent and improved performance by reducing query latency by over 68 percent. I implemented parallel query execution strategies and integrated caching mechanisms at both disk and metadata levels to optimize speed and reduce infrastructure costs. My work includes building high-throughput log ingestion pipelines, scalable log export services, and custom query parsers. On the backend, I work with FastAPI, PostgreSQL, Redis, and Celery, while on the frontend, I build interactive data visualizations using React and TypeScript.",
     projects: [],
     skills: [
       "React.js",
       "TypeScript",
       "Python",
+      "FastAPI",
       "Flask",
       "PostgreSQL",
       "MongoDB",
@@ -36,6 +37,7 @@ const experiences: Experience[] = [
       "RabbitMQ",
       "Celery",
       "Docker",
+      "Kubernetes",
       "AWS",
     ],
     company: {
